@@ -1,0 +1,31 @@
+Write a JavaScript function to print a solid square of size n × n.
+****
+****
+****
+****
+
+Write a JavaScript function to print the following pattern:
+1111
+2222
+3333
+4444
+
+Write a JavaScript function to print the following pattern:
+1234
+1234
+1234
+1234
+
+
+
+Write a function to print a hollow square of size n × n.
+Write a function to print a right-angled triangle.
+Write a function to print an inverted right-angled triangle.
+Write a function to print a left-aligned triangle.
+Write a function to print an inverted left-aligned triangle.
+
+
+Write a function to print a centered pyramid pattern.
+Write a function to print an inverted pyramid pattern.
+Write a function to print a right-angled triangle using numbers instead of stars.
+Write a function to print a right-angled triangle with only borders.
