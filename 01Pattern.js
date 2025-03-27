@@ -1,76 +1,66 @@
-// Hey everyone , Welcome back to Code with Poonam
-// If you're new here, make sure to hit that like button and subscribe for more coding tutorials!"
-
-// In In today's video, we're going to learn how to print a solid square pattern using JavaScript.
-// Lets proceed with the challenge and move towards our VS Code.
-
-// In VS Code , the question is mentioned here that we have 
 // Write a JavaScript function to print a solid square of size n × n.
+// Output:
+
 // ****
 // ****
 // ****
 // ****
 
-//  JavaScript function >> printPattern()
-//  print a solid square of size n × n >> 4*4 >> n=4
+// JavaScript function             >>printPattern()
+// print a solid square of size n × n
 
 // Approach:
-// Create a variable str with empty string  >> This will hold the pattern
-// let str=""
-// Nested Loops >> Loop inside an loop >>Outer Loop and Inner Loop
-// Outer Loop  >> Control the number of rows  >> i loop
-// Inner Loop >> Control the number of columns >> j loop
-// 1234 >> cols >> j loop
-// **** 1 >> i loop
-// **** 2 >> i loop
-// **** 3 >> i loop
-// **** 4 >> i loop
+// let str="" >>Hold final pattern
+// size n × n >>4*4 >> n=4
+// Nested loops >>Loop inside an Loop >>Outer ||Inner
+// Outer Loop >> Control no of rows  >>i loop
+// Inner loop >> Control no of cols  >>j loop
+// 1234   >> j loop  >>cols
+// **** 1 >> i loop  >>rows
+// **** 2 >> i loop  >>rows 
+// **** 3 >> i loop  >>rows 
+// **** 4 >> i loop  >>rows
 
-// i loop >> start >>1 >> end >> n =4
-// j loop >> start >>1 >> end >> n =4
+// i loop >>start >>1     end >>4 n=4
+// j loop >>start >>1     end >>4 n=4
 
-// for (let i = 1; i <=n; i++) {
-//     for(let j = 1; j <=n; j++) {
-        // Add * to str
-        // str += "*"
-//     }
-    // Add \n to str >> so that it will print in next line
-    //str += "\n"
+// for(let i=1;i<=n;i++){
+    // for(let j=1;j<=n;j++){
+        // Print *
+        // str+="*" ||str=str+"*"
+    // }
+    // str+="\n"
 // }
-// Print str
+// Print str >> solid square pattern
 
-// Working
-// i=1  i<=4 >> T 
-// j=1 >>T * || j=2 >> * || j=3 >> * || j=4 >> * >> str = "*****" || j=5 >> F>> Terminate
+// Working:
+//  i=1;i<=n;i++
+//  i=1;1<=4;i++ >>T
+//  j=1;1<=4>> T >>* ||j=2;2<=4>> T >>* ||j=3;3<=4>> T >>*||j=4;4<=4>> T >>*||j=5 >>F >>Termainate "****"
 
-// i=2  i<=4 >> T 
-// j=1 >>T * || j=2 >> * || j=3 >> * || j=4 >> * >> str = "*****" || j=5 >> F>> Terminate
+//  i=2;2<=4;i++ >>T
+//  j=1;1<=4>> T >>* ||j=2;2<=4>> T >>* ||j=3;3<=4>> T >>*||j=4;4<=4>> T >>*||j=5 >>F >>Termainate "****"
 
-// i=3  i<=4 >> T
-// j=1 >>T * || j=2 >> * || j=3 >> * || j=4 >> * >> str = "*****" || j=5 >> F>> Terminate
+//  i=3;3<=4;i++ >>T
+//  j=1;1<=4>> T >>* ||j=2;2<=4>> T >>* ||j=3;3<=4>> T >>*||j=4;4<=4>> T >>*||j=5 >>F >>Termainate "****"
 
-// i=4  i<=4 >> T
-// j=1 >>T * || j=2 >> * || j=3 >> * || j=4 >> * >> str = "*****" || j=5 >> F>> Terminate
+//  i=4;4<=4;i++ >>T
+//  j=1;1<=4>> T >>* ||j=2;2<=4>> T >>* ||j=3;3<=4>> T >>*||j=4;4<=4>> T >>*||j=5 >>F >>Termainate "****"
 
-// i=5  i<=4 >> F >> Terminate 
-// End of both the loop
+// i=5;5<=4;i++  >>F
+// Terminate >> End both Loop
 
-function printPattern(n) {
-    let str=""
-    for (let i = 1; i <=n; i++) {      
-            for(let j = 1; j <=n; j++) {    
-                str += "*"
-            }
-            str += "\n"
-        }    
-        console.log(str)
+function printPattern(n){
+    // console.log(n)
+    let str="";
+    // Nested Loop
+    for(let i=1;i<=n;i++){
+        for(let j=1;j<=n;j++){
+            //Print *
+            str+="*" 
+        }
+        str+="\n"
+    }
+    console.log(str)
 }
-
-printPattern(4);
-
-// "This is a simple example of how loops work in JavaScript. Try experimenting with different values of n and let me know your results in the comments!"
-
-// 👍 "If you found this video helpful, don't forget to like, share, and subscribe for more programming tutorials. See you in the next one!"
-
-// 👋 Keep Coding ,Keep Learning and Keep Growing 
-// Thank You
+printPattern(4)
