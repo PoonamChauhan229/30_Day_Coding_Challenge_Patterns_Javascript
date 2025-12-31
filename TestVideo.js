@@ -1,6 +1,6 @@
 // Hey everyone , Welcome back to Code with Poonam
 // If you're new here, make sure to hit the like button and subscribe for more coding tutorials!
-// We're on Day 13 of our 30-Day Pattern Challenge! 
+// We're on Day 14 of our 30-Day Pattern Challenge! 
 // and today’s pattern is all about printing a  downward-facing right-angled triangle aligned to the right and also printing sequential numbers.
 // Lets proceed with the challenge and move towards our VS Code.
 
