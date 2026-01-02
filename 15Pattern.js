@@ -40,5 +40,55 @@
 // Print str variable
 
 // Working
-// i=1;i<=n;i++ ||n=4
+// i=1;i<=n;i++ ||n=4 
+// j=1;j<=n;j++ ||j<i
+// j=1;1<=4 >> T >>j<i >>1<1>>F >>1
+// j=2;2<=4 >> T >>j<i >>2<1>>F >>2
+// j=3;3<=4 >> T >>j<i >>3<1>>F >>3
+// j=4;4<=4 >> T >>j<i >>4<1>>F >>4
+// j=5;5<=4 >> F >>Terminate >>str="1234"
 
+// i=2;i<=n;i++ ||n=4 >>2<=4 >>T
+// j=1;j<=n;j++ ||j<i
+// j=1;1<=4 >> T >>j<i >>1<2 >>T >>" "
+// j=2;2<=4 >> T >>j<i >>2<2 >>F >>2
+// j=3;3<=4 >> T >>j<i >>3<2 >>F >>3
+// j=4;4<=4 >> T >>j<i >>4<4 >>F >>4
+// j=5;5<=4 >> F >>Terminate >>str=" 234"
+
+// i=3;i<=n;i++ ||n=4 >>3<=4 >>T
+// j=1;j<=n;j++ ||j<i
+// j=1;1<=4 >> T >>j<i >>1<3 >>T >>" "
+// j=2;2<=4 >> T >>j<i >>2<3 >>T >>" "
+// j=3;3<=4 >> T >>j<i >>3<3 >>F >>3
+// j=4;4<=4 >> T >>j<i >>4<3 >>F >>4
+// j=5;5<=4 >> F >>Terminate >>str="  34"
+
+// i=4;i<=n;i++ ||n=4 >>4<=4 >>T
+// j=1;j<=n;j++ ||j<i
+// j=1;1<=4 >> T >>j<i >>1<4 >>T >>" "
+// j=2;2<=4 >> T >>j<i >>2<4 >>T >>" "
+// j=3;3<=4 >> T >>j<i >>3<4 >>T >>" "
+// j=4;4<=4 >> T >>j<i >>4<4 >>F >>4
+// j=5;5<=4 >> F >>Terminate >>str="   4"
+
+// i=5;i<=n;i++ ||n=4 >>5<=4 >>F
+// Terminate >>End of Loops
+
+
+function printPattern(n){
+    let str=""
+    for(let i=1;i<=n;i++){
+        for(let j=1;j<=n;j++){
+            // console.log("i=",i,"j=",j)
+            if(j<i){
+                str+=" "
+            }else{
+                str+=j
+            }
+        }
+        str+="\n"
+    }
+    console.log(str.trimEnd())
+}
+printPattern(4)
