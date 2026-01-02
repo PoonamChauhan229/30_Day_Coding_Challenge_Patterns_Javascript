@@ -1,6 +1,6 @@
 // Hey everyone , Welcome back to Code with Poonam
 // If you're new here, make sure to hit the like button and subscribe for more coding tutorials!
-// We're on Day 15 of our 30-Day Pattern Challenge! 
+// We're on Day 16 of our 30-Day Pattern Challenge! 
 // and today’s pattern is all about printing a  downward-facing right-angled triangle aligned to the right
 // and also printing sequential numbers.
 // Lets proceed with the challenge and move towards our VS Code.
@@ -45,6 +45,37 @@
 //     str+="\n"
 // }
 // Print str variable
+
+// Working:
+// i=1;1<=4;i++
+// j=1;1<=4 >> j<i (1<1) >>False >>Print 1
+// j=2;2<=4 >> j<i (2<1) >>False >>Print 2
+// j=3;3<=4 >> j<i (3<1) >>False >>Print 3
+// j=4;4<=4 >> j<i (4<1) >>False >>Print 4
+// Result >> "1234"
+
+// i=2;2<=4;i++
+// j=1;1<=4 >> j<i (1<2) >>True  >>" "
+// j=2;2<=4 >> j<i (2<2) >>False >>Print 2
+// j=3;3<=4 >> j<i (3<2) >>False >>Print 3
+// j=4;4<=4 >> j<i (4<2) >>False >>Print 4
+// Result >> " 234"
+
+// i=3;3<=4;i++
+// j=1;1<=4 >> j<i (1<3) >>True  >>" "
+// j=2;2<=4 >> j<i (2<3) >>True  >>" "
+// j=3;3<=4 >> j<i (3<3) >>False >>Print 3
+// j=4;4<=4 >> j<i (4<3) >>False >>Print 4
+// Result >> "  34"
+
+// i=4;4<=4;i++
+// j=1;1<=4 >> j<i (1<4) >>True  >>" "
+// j=2;2<=4 >> j<i (2<4) >>True  >>" "
+// j=3;3<=4 >> j<i (3<4) >>True  >>" "
+// j=4;4<=4 >> j<i (4<4) >>False >>Print 4
+// Result >> "   4"
+
+// Termination >> End of loops
 
 function printPattern(n){
     let str = "";
