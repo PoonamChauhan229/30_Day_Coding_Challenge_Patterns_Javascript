@@ -31,7 +31,7 @@
 
 // i loop >>start-1     ||end-4 n=4 ||i=1;i<=n;i++
 // j loop >>start-1     ||end-4 n=4 ||j=1;j<=n;j++ >>Print >>Conditionally Spaces+Numbers
-// j<i >>True >>" " || Else >>Print j
+// j<i >>True >>" " || False >>Print j
 
 // for(let i=1;i<=n;i++){
 //     for(let j=1;j<=n;j++){
@@ -47,35 +47,36 @@
 // Print str variable
 
 // Working:
-// i=1;1<=4;i++
-// j=1;1<=4 >> j<i (1<1) >>False >>Print 1
-// j=2;2<=4 >> j<i (2<1) >>False >>Print 2
-// j=3;3<=4 >> j<i (3<1) >>False >>Print 3
-// j=4;4<=4 >> j<i (4<1) >>False >>Print 4
-// Result >> "1234"
+// i=1;1<=4;i++ || j<i
+// j=1;1<=4 >>1<1>>False >>1
+// j=2;2<=4 >>2<1>>False >>2
+// j=3;3<=4 >>3<1>>False >>3
+// j=4;4<=4 >>4<1>>False >>4
+// j=5;5<=4 >>F >>Terminate >>str+="1234"
 
-// i=2;2<=4;i++
-// j=1;1<=4 >> j<i (1<2) >>True  >>" "
-// j=2;2<=4 >> j<i (2<2) >>False >>Print 2
-// j=3;3<=4 >> j<i (3<2) >>False >>Print 3
-// j=4;4<=4 >> j<i (4<2) >>False >>Print 4
-// Result >> " 234"
+// i=2;2<=4;i++ || j<i
+// j=1;1<=4 >>1<2>>True  >>" "
+// j=2;2<=4 >>2<2>>False >>2
+// j=3;3<=4 >>3<2>>False >>3
+// j=4;4<=4 >>4<2>>False >>4
+// j=5;5<=4 >>F >>Terminate >>str+=" 234"
 
-// i=3;3<=4;i++
-// j=1;1<=4 >> j<i (1<3) >>True  >>" "
-// j=2;2<=4 >> j<i (2<3) >>True  >>" "
-// j=3;3<=4 >> j<i (3<3) >>False >>Print 3
-// j=4;4<=4 >> j<i (4<3) >>False >>Print 4
-// Result >> "  34"
+// i=3;3<=4;i++ || j<i
+// j=1;1<=4 >>1<3>>True  >>" "
+// j=2;2<=4 >>2<3>>True  >>" "
+// j=3;3<=4 >>3<3>>False >>3
+// j=4;4<=4 >>4<3>>False >>4
+// j=5;5<=4 >>F >>Terminate >>str+="  34"
 
-// i=4;4<=4;i++
-// j=1;1<=4 >> j<i (1<4) >>True  >>" "
-// j=2;2<=4 >> j<i (2<4) >>True  >>" "
-// j=3;3<=4 >> j<i (3<4) >>True  >>" "
-// j=4;4<=4 >> j<i (4<4) >>False >>Print 4
-// Result >> "   4"
+// i=4;4<=4;i++ || j<i
+// j=1;1<=4 >>1<4>>True  >>" "
+// j=2;2<=4 >>2<4>>True  >>" "
+// j=3;3<=4 >>3<4>>True  >>" "
+// j=4;4<=4 >>4<4>>False >>4
+// j=5;5<=4 >>F >>Terminate >>str+="   4"
 
-// Termination >> End of loops
+// i=5;5<=4;i++ >>F
+// Termination >>End of Loops
 
 function printPattern(n){
     let str = "";

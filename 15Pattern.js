@@ -39,4 +39,6 @@
 // }
 // Print str variable
 
+// Working
+// i=1;i<=n;i++ ||n=4
 
