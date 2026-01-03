@@ -95,8 +95,8 @@
 
 function printPattern(n){
     let str = "";
-    for(let i = n; i >= 1; i--){      // outer loop (rows)
-        for(let k = 1; k <= n - i; k++){ // space loop
+    for(let i = 1; i <= n; i++){      // outer loop (rows)
+        for(let k = 1; k <= i; k++){ // space loop
             str += " ";
         }
         for(let j = 1; j <= i; j++){  // number loop
