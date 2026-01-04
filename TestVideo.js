@@ -1,113 +1,109 @@
 // Hey everyone , Welcome back to Code with Poonam
 // If you're new here, make sure to hit the like button and subscribe for more coding tutorials!
-// We're on Day 16 of our 30-Day Pattern Challenge! 
-// and today’s pattern is all about printing a  downward-facing right-angled triangle aligned to the right
-// and also printing sequential numbers.
+// We're on Day 17 of our 30-Day Pattern Challenge! 
+// and today’s pattern is all about printing a pyramid pattern using stars (*).
 // Lets proceed with the challenge and move towards our VS Code.
 
-// In VS Code , the question is mentioned here that we have 
+// In VS Code , the question is mentioned here that we have  
 
 // Write a Javascript function to print the following pattern.
-// 1234
-//  123
-//   12
-//    1
+//    *
+//   ***
+//  *****
+// *******
 
 // Javascript function >>printPattern()
-// Print Pattern       >>Right angled traingle >>alignment right
+// Print Pattern >> Pyramid >> Center aligned
 
 // Approach:
-// Create str variable >>Final Output
+// Create str variable >> Final Output
 // let str=""
-// Nested loops
-// Outer Loop >>Control n no. of rows >>i loop
-// Inner Loop-1 >>Print Spaces >>k loop
-// Inner Loop-2 >>Print Numbers >>j loop
+// Nested Loops
+// 3 loops
+// Outer loop   >> Manage n no. of rows >> i loop
+// Inner Loop-1 >> Manage spaces        >> k loop
+// Inner Loop-2 >> Manage stars         >> j loop
 
-// 1234 >>i=4 >>Print 0 Spaces >>Print 1 to 4
-//  123 >>i=3 >>Print 1 Space  >>Print 1 to 3
-//   12 >>i=2 >>Print 2 Spaces >>Print 1 to 2
-//    1 >>i=1 >>Print 3 Spaces >>Print 1 time
+//    *       >> i=1 >> Print 1 star  & 3 Spaces
+//   ***      >> i=2 >> Print 3 stars & 2 Spaces
+//  *****     >> i=3 >> Print 5 stars & 1 Space
+// *******    >> i=4 >> Print 7 stars & 0 Spaces
 
+// i loop >> rows   >> start -1 || end-n
+// k loop >> spaces >> start -1 || end-n-i
+// j loop >> stars  >> start -1 || end-(2*i-1)
 
-    // for(let i = n; i >= 1; i--){      
-    //     for(let k = 1; k <= n - i; k++){
-             //Print Spaces
-            // Concat >> str >>" "  
-    //     }
-    //     for(let j = 1; j <= i; j++){  
-            // Print j value
-            // Concat >> str >>j
-    //     }
-        // Concat str >> "\n"
+// for(let i=1;i<=n;i++){
+//     for(let k=1;k<=n-i;k++){
+//         Print Spaces
+//         Concat >> str >>" "
+//     }
+//     for(let j=1;j<=2*i-1;j++){
+//         Print "*"
+//         Concat >> str >>"*"
+//     }
+//     Concat >> str >>"\n"
 // }
 // Print str variable
 
-
 // Working:
+// i=1;i<=n;i++ || n=4
+// k=1;1<=4-1 >>1<=3 >>T >>" "
+// k=2;2<=3 >>T >>" "
+// k=3;3<=3 >>T >>" "
+// k=4;4<=3 >>F >>Terminate >>"   "
+// j=1;1<=1 >>T >>"*"
+// j=2;2<=1 >>F >>Terminate >>"   *"
 
-// i=n;i>=1;i--
-// k=1;k<=n-i;k++
-// j=1;j<=i;j++
+// i=2;i<=n;i++
+// k=1;1<=4-2 >>1<=2 >>T >>" "
+// k=2;2<=2 >>T >>" "
+// k=3;3<=2 >>F >>Terminate >>"  "
+// j=1;1<=3 >>T >>"*"
+// j=2;2<=3 >>T >>"*"
+// j=3;3<=3 >>T >>"*"
+// j=4;4<=3 >>F >>Terminate >>"  ***"
 
-// i=4;4>=1;i--
-// k=1;k<=4-4;k++
-// k=1;1<=0>>False >>No space printed
-// j=1;j<=4;j++
-// j=1;1<=4>>True >>1
-// j=2;2<=4>>True >>2
-// j=3;3<=4>>True >>3
-// j=4;4<=4>>True >>4
-// j=5;5<=4>>False >>Terminate >>str+="1234"
+// i=3;i<=n;i++
+// k=1;1<=4-3 >>1<=1 >>T >>" "
+// k=2;2<=1 >>F >>Terminate >>" "
+// j=1;1<=5 >>T >>"*"
+// j=2;2<=5 >>T >>"*"
+// j=3;3<=5 >>T >>"*"
+// j=4;4<=5 >>T >>"*"
+// j=5;5<=5 >>T >>"*"
+// j=6;6<=5 >>F >>Terminate >>" *****"
 
-// i=3;3>=1;i--
-// k=1;k<=4-3;k++
-// k=1;1<=1>>True >>" "
-// k=2;2<=1>>False >>Terminate space loop
-// j=1;j<=3;j++
-// j=1;1<=3>>True >>1
-// j=2;2<=3>>True >>2
-// j=3;3<=3>>True >>3
-// j=4;4<=3>>False >>Terminate >>str+=" 123"
+// i=4;i<=n;i++
+// k=1;1<=4-4 >>1<=0 >>F >>Terminate >>0 Spaces
+// j=1;1<=7 >>T >>"*"
+// j=2;2<=7 >>T >>"*"
+// j=3;3<=7 >>T >>"*"
+// j=4;4<=7 >>T >>"*"
+// j=5;5<=7 >>T >>"*"
+// j=6;6<=7 >>T >>"*"
+// j=7;7<=7 >>T >>"*"
+// j=8;8<=7 >>F >>Terminate >>"*******"
 
-// i=2;2>=1;i--
-// k=1;k<=4-2;k++
-// k=1;1<=2>>True >>" "
-// k=2;2<=2>>True >>" "
-// k=3;3<=2>>False >>Terminate space loop
-// j=1;j<=2;j++
-// j=1;1<=2>>True >>1
-// j=2;2<=2>>True >>2
-// j=3;3<=2>>False >>Terminate >>str+="  12"
-
-// i=1;1>=1;i--
-// k=1;k<=4-1;k++
-// k=1;1<=3>>True >>" "
-// k=2;2<=3>>True >>" "
-// k=3;3<=3>>True >>" "
-// k=4;4<=3>>False >>Terminate space loop
-// j=1;j<=1;j++
-// j=1;1<=1>>True >>1
-// j=2;2<=1>>False >>Terminate >>str+="   1"
-
-// i=0;0>=1>>False
-// Termination >>End of loops
+// i=5;i<=n >>5<=4 >>F
+// End of all loops
 
 function printPattern(n){
-    let str = "";
-    for(let i = 1; i <= n; i++){      // outer loop (rows)
-        for(let k = 1; k <= i; k++){ // space loop
-            str += " ";
+    let str=""
+    for(let i=1;i<=n;i++){
+        for(let k=1;k<=n-i;k++){
+            str+=" "
         }
-        for(let j = 1; j <= i; j++){  // number loop
-            str += j;
+        for(let j=1;j<=2*i-1;j++){
+            str+="*"
         }
-        str += "\n";
+        str+="\n"
     }
-    console.log(str.trimEnd());
+    console.log(str.trimEnd())
 }
 
-printPattern(4);
+printPattern(4)
+
 // "Try experimenting with different values of n and let me know your results in the comments!"
 
 // "If you found this video helpful, don't forget to like, share, and subscribe for more programming tutorials. See you in the next one!"
