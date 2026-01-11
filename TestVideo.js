@@ -1,19 +1,19 @@
 // Hey everyone , Welcome back to Code with Poonam
 // If you're new here, make sure to hit the like button and subscribe for more coding tutorials!
-// We're on Day 17 of our 30-Day Pattern Challenge! 
-// and today’s pattern is all about printing a pyramid pattern using stars (*).
+// We're on Day 18 of our 30-Day Pattern Challenge!
+// and today’s pattern is all about printing a number pyramid pattern.
 // Lets proceed with the challenge and move towards our VS Code.
 
 // In VS Code , the question is mentioned here that we have  
 
 // Write a Javascript function to print the following pattern.
-//    *
-//   ***
-//  *****
-// *******
+//    1
+//   222
+//  33333
+// 4444444
 
-// Javascript function >>printPattern()
-// Print Pattern >> Pyramid >> Center aligned
+// Javascript function >> printPattern()
+// Print Pattern >> Number Pyramid >> Center aligned
 
 // Approach:
 // Create str variable >> Final Output
@@ -22,16 +22,16 @@
 // 3 loops
 // Outer loop   >> Manage n no. of rows >> i loop
 // Inner Loop-1 >> Manage spaces        >> k loop
-// Inner Loop-2 >> Manage stars         >> j loop
+// Inner Loop-2 >> Manage numbers       >> j loop
 
-//    *       >> i=1 >> Print 1 star  & 3 Spaces
-//   ***      >> i=2 >> Print 3 stars & 2 Spaces
-//  *****     >> i=3 >> Print 5 stars & 1 Space
-// *******    >> i=4 >> Print 7 stars & 0 Spaces
+//    1       >> i=1 >> Print number 1 (1 time) & 3 Spaces
+//   222      >> i=2 >> Print number 2 (3 times) & 2 Spaces
+//  33333     >> i=3 >> Print number 3 (5 times) & 1 Space
+// 4444444    >> i=4 >> Print number 4 (7 times) & 0 Spaces
 
-// i loop >> rows   >> start -1 || end-n
-// k loop >> spaces >> start -1 || end-n-i
-// j loop >> stars  >> start -1 || end-(2*i-1)
+// i loop >> rows     >> start -1 || end-n
+// k loop >> spaces  >> start -1 || end-n-i
+// j loop >> numbers >> start -1 || end-(2*i-1)
 
 // for(let i=1;i<=n;i++){
 //     for(let k=1;k<=n-i;k++){
@@ -39,8 +39,8 @@
 //         Concat >> str >>" "
 //     }
 //     for(let j=1;j<=2*i-1;j++){
-//         Print "*"
-//         Concat >> str >>"*"
+//         Print number i
+//         Concat >> str >> i
 //     }
 //     Concat >> str >>"\n"
 // }
@@ -52,38 +52,38 @@
 // k=2;2<=3 >>T >>" "
 // k=3;3<=3 >>T >>" "
 // k=4;4<=3 >>F >>Terminate >>"   "
-// j=1;1<=1 >>T >>"*"
-// j=2;2<=1 >>F >>Terminate >>"   *"
+// j=1;1<=1 >>T >>"1"
+// j=2;2<=1 >>F >>Terminate >>"   1"
 
 // i=2;i<=n;i++
 // k=1;1<=4-2 >>1<=2 >>T >>" "
 // k=2;2<=2 >>T >>" "
 // k=3;3<=2 >>F >>Terminate >>"  "
-// j=1;1<=3 >>T >>"*"
-// j=2;2<=3 >>T >>"*"
-// j=3;3<=3 >>T >>"*"
-// j=4;4<=3 >>F >>Terminate >>"  ***"
+// j=1;1<=3 >>T >>"2"
+// j=2;2<=3 >>T >>"2"
+// j=3;3<=3 >>T >>"2"
+// j=4;4<=3 >>F >>Terminate >>"  222"
 
 // i=3;i<=n;i++
 // k=1;1<=4-3 >>1<=1 >>T >>" "
 // k=2;2<=1 >>F >>Terminate >>" "
-// j=1;1<=5 >>T >>"*"
-// j=2;2<=5 >>T >>"*"
-// j=3;3<=5 >>T >>"*"
-// j=4;4<=5 >>T >>"*"
-// j=5;5<=5 >>T >>"*"
-// j=6;6<=5 >>F >>Terminate >>" *****"
+// j=1;1<=5 >>T >>"3"
+// j=2;2<=5 >>T >>"3"
+// j=3;3<=5 >>T >>"3"
+// j=4;4<=5 >>T >>"3"
+// j=5;5<=5 >>T >>"3"
+// j=6;6<=5 >>F >>Terminate >>" 33333"
 
 // i=4;i<=n;i++
 // k=1;1<=4-4 >>1<=0 >>F >>Terminate >>0 Spaces
-// j=1;1<=7 >>T >>"*"
-// j=2;2<=7 >>T >>"*"
-// j=3;3<=7 >>T >>"*"
-// j=4;4<=7 >>T >>"*"
-// j=5;5<=7 >>T >>"*"
-// j=6;6<=7 >>T >>"*"
-// j=7;7<=7 >>T >>"*"
-// j=8;8<=7 >>F >>Terminate >>"*******"
+// j=1;1<=7 >>T >>"4"
+// j=2;2<=7 >>T >>"4"
+// j=3;3<=7 >>T >>"4"
+// j=4;4<=7 >>T >>"4"
+// j=5;5<=7 >>T >>"4"
+// j=6;6<=7 >>T >>"4"
+// j=7;7<=7 >>T >>"4"
+// j=8;8<=7 >>F >>Terminate >>"4444444"
 
 // i=5;i<=n >>5<=4 >>F
 // End of all loops
@@ -95,7 +95,7 @@ function printPattern(n){
             str+=" "
         }
         for(let j=1;j<=2*i-1;j++){
-            str+="*"
+            str+=i
         }
         str+="\n"
     }
@@ -108,5 +108,5 @@ printPattern(4)
 
 // "If you found this video helpful, don't forget to like, share, and subscribe for more programming tutorials. See you in the next one!"
 
-// 👋 Keep Coding ,Keep Learning and Keep Growing 
+// 👋 Keep Coding ,Keep Learning and Keep Growing
 // Thank You
